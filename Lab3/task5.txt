@@ -1,0 +1,65 @@
+#include <iostream>
+
+#include <string>
+
+using namespace std;
+
+
+
+int main() {
+
+
+
+    string viddilennya;
+
+
+
+    cout << "Введіть позначення відмінка (н, р, д, з, о, м, к): ";
+
+
+
+    cin >> viddilennya;
+
+
+
+    if (viddilennya == "н" || viddilennya == "Н") {
+
+        cout << "Називний відмінок: Хто? Що?" << endl;
+
+    } else if (viddilennya == "р" || viddilennya == "Р") {
+
+        cout << "Родовий відмінок: Кого? Чого?" << endl;
+
+    } else if (viddilennya == "д" || viddilennya == "Д") {
+
+        cout << "Давальний відмінок: Кому? Чому?" << endl;
+
+    } else if (viddilennya == "з" || viddilennya == "З") {
+
+        cout << "Знахідний відмінок: Кого? Що?" << endl;
+
+    } else if (viddilennya == "о" || viddilennya == "О") {
+
+        cout << "Орудний відмінок: Ким? Чим?" << endl;
+
+    } else if (viddilennya == "м" || viddilennya == "М") {
+
+        cout << "Місцевий відмінок: Про кого? Про що?" << endl;
+
+    } else if (viddilennya == "к" || viddilennya == "К") {
+
+        cout << "Кличний відмінок: Ой кого? Ой що?" << endl;
+
+    } else {
+
+        cout << "Невірне позначення відмінка. Введіть одну з наступних літер: н, р, д, з, о, м, к." << endl;
+
+    }
+
+
+
+    return 0;
+
+
+
+}
