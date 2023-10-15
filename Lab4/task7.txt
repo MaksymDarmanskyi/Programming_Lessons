@@ -1,0 +1,98 @@
+#include <iostream>
+
+using namespace std;
+
+
+
+int main() {
+
+    int n;
+
+    cout << "Введіть число n: ";
+
+    cin >> n;
+
+
+
+    double znamenyk = 0.0;
+
+    double cheselnyk = 1.0;
+
+
+
+    cout << "Введіть " << n << " дійсних чисел:";
+
+
+
+    for (int i = 0; i < n; i++) {
+
+        double num;
+
+        cin >> num;
+a#include <iostream>
+
+using namespace std;
+
+
+
+int main() {
+
+    
+
+    double n, q;
+
+    cout << "Введіть кількість чисел n: ";
+
+    cin >> n;
+
+    
+
+    int sum = 0;
+
+    
+
+    cout << "Введіть " << n << " цілих чисел:";
+
+    
+
+    for (int i = 0; i < n; i++) {
+
+    int num;
+
+    cin >> num;
+
+    if (num > 0 && num % 2 == 0) {
+
+        sum += num;
+
+    }
+
+    
+
+    }
+
+    cout << sum;
+
+    
+
+    return 0;
+
+}
+
+
+        znamenyk += num;
+
+        cheselnyk *= num;
+
+    }
+
+        double result = znamenyk / cheselnyk;
+
+        cout << "Результат :" << result;
+
+        
+
+    return 0;
+
+}
+
