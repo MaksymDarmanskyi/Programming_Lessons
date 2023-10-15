@@ -1,0 +1,77 @@
+#include <iostream>
+
+#include <cmath>
+
+using namespace std;
+
+
+
+int main() {
+
+  double xA, yA, xB, yB, xC, yC;
+
+  
+
+  cout << "Введіть координати вершин A (xA yA): ";
+
+  cin >> xA >> yA;
+
+  
+
+  cout << "Введіть координати вершин B (xB yB): ";
+
+  cin >> xB >> yB;
+
+  
+
+  cout << "Введіть координати вершин C (xC yC): ";
+
+  cin >> xC >> yC;
+
+  
+
+  double ABx = xB - xA;
+
+  double ABy = yB - yA;
+
+  double BCx = xC - xB;
+
+  double BCy = yC - yB;
+
+  
+
+  double lengthAB = sqrt(ABx * ABx + ABy * ABy);
+
+  double lengthBC = sqrt(BCx * BCx + BCy * BCy);
+
+  
+
+  double dotProduct = (ABx * BCx + ABy * BCy);
+
+  
+
+  double cosAngle = dotProduct / (lengthAB * lengthBC);
+
+  
+
+  double angleA = acos(cosAngle) * 180 / M_PI;
+
+  double angleB = acos(cosAngle) * 180 / M_PI;
+
+  double angleC = 180 - angleA - angleB;
+
+  
+
+  cout << "Внутрішні кути трикутника АВС: " << endl;
+
+  cout << "Кут А: " << angleA << " градусів" << endl;
+
+  cout << "Кут В: " << angleB << " градусів" << endl;
+
+  cout << "Кут С: " << angleC << " градусів" << endl;
+
+  
+
+    return 0;
+
+}

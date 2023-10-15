@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    double zristFut;  
+    double zristSm;   
+
+    cout << "¬вед≥ть зр≥ст у футах: ";
+    cin >> zristFut;
+
+    zristSm = zristFut * 30.48;
+
+    cout << "«р≥ст у сантиметрах: " << zristSm << " см" << endl;
+
+    return 0;
+}

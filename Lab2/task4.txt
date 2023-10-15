@@ -1,0 +1,14 @@
+#include <iostream>
+
+
+int main() {
+
+    double V2, T1;
+
+    double S = V2 * T1;
+
+    std::cout << "Øëÿõ çà òå÷³ºþ: " << S << "êì" << std::endl;
+
+    return 0;
+
+}
