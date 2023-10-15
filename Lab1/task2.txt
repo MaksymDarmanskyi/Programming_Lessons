@@ -6,12 +6,12 @@ int main() {
     double zristFut;  
     double zristSm;   
 
-    cout << "Ââåä³òü çð³ñò ó ôóòàõ: ";
+    cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ð·Ñ€Ñ–ÑÑ‚ Ñƒ Ñ„ÑƒÑ‚Ð°Ñ…: ";
     cin >> zristFut;
 
     zristSm = zristFut * 30.48;
 
-    cout << "Çð³ñò ó ñàíòèìåòðàõ: " << zristSm << " ñì" << endl;
+    cout << "Ð—Ñ€Ñ–ÑÑ‚ Ñƒ ÑÐ°Ð½Ñ‚Ð¸Ð¼ÐµÑ‚Ñ€Ð°Ñ…: " << zristSm << " ÑÐ¼" << endl;
 
     return 0;
 }
