@@ -7,7 +7,7 @@ int main() {
 
     double S = V2 * T1;
 
-    std::cout << "Øëÿõ çà òå÷³ºş: " << S << "êì" << std::endl;
+    std::cout << "Ğ¨Ğ»ÑÑ… Ğ·Ğ° Ñ‚ĞµÑ‡Ñ–Ñ”Ñ: " << S << "ĞºĞ¼" << std::endl;
 
     return 0;
 
