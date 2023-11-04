@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    char a, b;
+
+    cout << "Введіть значення a: ";
+    cin >> a;
+    cout << "Введіть значення b: ";
+    cin >> b;
+
+    char *ptr_a = &a;
+    char *ptr_b = &b;
+
+    char temp = *ptr_a;
+    *ptr_a = *ptr_b;
+    *ptr_b = temp;
+
+    cout << "Після обміну:" << endl;
+    cout << "a = " << a << endl;
+    cout << "b = " << b << endl;
+
+    return 0;
+}

@@ -1,0 +1,52 @@
+#include <iostream>
+
+
+
+using namespace std;
+
+
+
+int main() {
+
+    int n;
+
+    do {
+
+        cout << "Введіть натуральне число n (4 < n < 10): ";
+
+        cin >> n;
+
+    } while (n <= 4 || n >= 10);
+
+
+
+    int result = 1;
+
+    int sign = 1;
+
+
+
+    cout << "Результати обрахунків:" << endl;
+
+
+
+    for (int i = 1; i <= n; i++) {
+
+        result *= sign * i;
+
+        cout << result << " ";
+
+        sign *= -1;
+
+    }
+
+
+
+    cout << endl;
+
+
+
+    return 0;
+
+}
+

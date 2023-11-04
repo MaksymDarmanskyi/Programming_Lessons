@@ -1,0 +1,62 @@
+#include <iostream>
+
+#include <string>
+
+
+
+using namespace std;
+
+
+
+int main() {
+
+    string text; 
+
+
+
+    cout << "Введіть текст, в якому є коми: ";
+
+    getline(cin, text); 
+
+
+
+
+
+    size_t firstCommaIndex = text.find(',');
+
+
+
+    if (firstCommaIndex != string::npos) {
+
+        cout << "Порядковий номер першої коми: " << firstCommaIndex + 1 << endl;
+
+    } else {
+
+        cout << "Кома не знайдена в тексті." << endl;
+
+    }
+
+
+
+
+
+    size_t lastCommaIndex = text.rfind(',');
+
+
+
+    if (lastCommaIndex != string::npos) {
+
+        cout << "Порядковий номер останньої коми: " << lastCommaIndex + 1 << endl;
+
+    } else {
+
+        cout << "Кома не знайдена в тексті." << endl;
+
+    }
+
+
+
+    return 0;
+
+}
+

@@ -1,0 +1,80 @@
+#include <iostream>
+
+using namespace std;
+
+
+
+double PowerN(double X, int N) {
+
+
+
+    if (N == 0) {
+
+        return 1.0;
+
+    }
+
+
+
+    if (N % 2 == 0) {
+
+        double temp = PowerN(X, N / 2);
+
+        return temp * temp;
+
+    }
+
+
+
+    if (N > 0) {
+
+        return X * PowerN(X, N - 1);
+
+    }
+
+
+
+    if (N < 0) {
+
+        return 1.0 / PowerN(X, -N);
+
+    }
+
+
+
+    return 0.0;
+
+}
+
+
+
+int main() {
+
+    double X;
+
+    int N;
+
+
+
+    cout << "Введіть значення X: ";
+
+    cin >> X;
+
+
+
+    cout << "Введіть значення N: ";
+
+    cin >> N;
+
+
+
+    double result = PowerN(X, N);
+
+    cout << "Результат: " << result << endl;
+
+
+
+    return 0;
+
+}
+

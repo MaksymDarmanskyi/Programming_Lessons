@@ -1,0 +1,130 @@
+#include <iostream>
+
+#include <string>
+
+#include <algorithm>
+
+
+
+using namespace std;
+
+
+
+struct NOTE {
+
+    string fullName;
+
+    string phoneNumber;
+
+    int birthDate[3];
+
+};
+
+
+
+bool compareBirthDate(const NOTE& note1, const NOTE& note2) {
+
+    for (int i = 0; i < 3; i++) {
+
+        if (note1.birthDate[i] < note2.birthDate[i]) {
+
+            return true;
+
+        } else if (note1.birthDate[i] > note2.birthDate[i]) {
+
+            return false;
+
+        }
+
+    }
+
+    return false; 
+
+}
+
+
+
+int main() {
+
+    const int MAX_NOTES = 3;
+
+    NOTE notes[MAX_NOTES];
+
+
+
+    for (int i = 0; i < MAX_NOTES; i++) {
+
+        cout << "Введіть інформацію для NOTE #" << i + 1 << endl;
+
+        cout << "Прізвище та ім'я: ";
+
+        cin.ignore();
+
+        getline(cin, notes[i].fullName);
+
+        cout << "Номер телефону: ";
+
+        cin >> notes[i].phoneNumber;
+
+        cout << "Дата народження (рік місяць день): ";
+
+        for (int j = 0; j < 3; j++) {
+
+            cin >> notes[i].birthDate[j];
+
+        }
+
+    }
+
+
+
+    sort(notes, notes + MAX_NOTES, compareBirthDate);
+
+
+
+    string searchPhoneNumber;
+
+    cout << "Введіть номер телефону для пошуку: ";
+
+    cin >> searchPhoneNumber;
+
+
+
+    bool found = false;
+
+
+
+    for (int i = 0; i < MAX_NOTES; i++) {
+
+        if (notes[i].phoneNumber == searchPhoneNumber) {
+
+            cout << "Знайдено відповідну інформацію для NOTE #" << i + 1 << endl;
+
+            cout << "Прізвище та ім'я: " << notes[i].fullName << endl;
+
+            cout << "Номер телефону: " << notes[i].phoneNumber << endl;
+
+            cout << "Дата народження: " << notes[i].birthDate[0] << "/" << notes[i].birthDate[1] << "/" << notes[i].birthDate[2] << endl;
+
+            found = true;
+
+            break; 
+
+        }
+
+    }
+
+
+
+    if (!found) {
+
+        cout << "NOTE з введеним номером телефону не знайдено." << endl;
+
+    }
+
+
+
+    return 0;
+
+}
+

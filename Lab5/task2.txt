@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    double radius;
+
+    cout << "Введіть радіус кола: ";
+    cin >> radius;
+
+    double *ptr_radius = &radius;
+
+    double area = 3.14159265359 * (*ptr_radius) * (*ptr_radius);
+
+    cout << "Площа кола з радіусом " << *ptr_radius << " дорівнює " << area << endl;
+
+    return 0;
+}

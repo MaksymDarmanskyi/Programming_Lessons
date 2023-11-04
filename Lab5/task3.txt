@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    int* ptr1 = nullptr;
+    int* ptr2 = nullptr;
+
+    ptr1 = new int;
+    ptr2 = new int;
+
+    cout << "Введіть значення для першого покажчика: ";
+    cin >> *ptr1;
+    cout << "Введіть значення для другого покажчика: ";
+    cin >> *ptr2;
+
+    int temp = *ptr1;
+    *ptr1 = *ptr2;
+    *ptr2 = temp;
+
+    cout << "Після обміну:" << endl;
+    cout << "Перший покажчик: " << *ptr1 << endl;
+    cout << "Другий покажчик: " << *ptr2 << endl;
+
+
+    delete ptr1;
+    delete ptr2;
+
+    return 0;
+}

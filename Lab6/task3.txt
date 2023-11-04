@@ -1,0 +1,64 @@
+#include <iostream>
+
+#include <vector>
+
+#include <unordered_set>
+
+
+
+using namespace std;
+
+
+
+int main() {
+
+    int n; 
+
+    cout << "Введіть кількість елементів у послідовності: ";
+
+    cin >> n;
+
+
+
+    vector<double> a(n); 
+
+    cout << "Введіть послідовність чисел:" << endl;
+
+    for (int i = 0; i < n; i++) {
+
+        cin >> a[i];
+
+    }
+
+
+
+    unordered_set<double> seen; 
+
+    unordered_set<double> duplicates; 
+
+
+
+    for (int i = 0; i < n; i++) {
+
+        if (seen.count(a[i]) > 0) {
+
+            duplicates.insert(a[i]);
+
+        } else {
+
+            seen.insert(a[i]);
+
+        }
+
+    }
+
+
+
+    cout << "Кількість членів, що входять у послідовність більше одного разу: " << duplicates.size() << endl;
+
+
+
+    return 0;
+
+}
+

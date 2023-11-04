@@ -1,0 +1,62 @@
+#include <iostream>
+
+using namespace std;
+
+
+
+int main() {
+
+    int numbers[100];
+
+
+
+    for (int i = 0; i < 100; i++) {
+
+        cout << "Введіть ціле число #" << i + 1 << ": ";
+
+        cin >> numbers[i];
+
+    }
+
+
+
+    cout << "Від'ємні числа:" << endl;
+
+
+
+    for (int i = 0; i < 100; i++) {
+
+        if (numbers[i] < 0) {
+
+            cout << numbers[i] << " ";
+
+        }
+
+    }
+
+
+
+    cout << "\nІнші числа:" << endl;
+
+
+
+    for (int i = 0; i < 100; i++) {
+
+        if (numbers[i] >= 0) {
+
+            cout << numbers[i] << " ";
+
+        }
+
+    }
+
+
+
+    cout << endl;
+
+
+
+    return 0;
+
+}
+
